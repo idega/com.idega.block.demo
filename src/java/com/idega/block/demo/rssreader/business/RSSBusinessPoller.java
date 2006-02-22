@@ -205,7 +205,6 @@ public class RSSBusinessPoller implements IWBundleStartable {
 			}
 		}
 		_instance = this;
-		bundle_ = starterBundle;
 		if (tManager==null) {
 			tManager = new TimerManager();
 		}
@@ -260,6 +259,4 @@ public class RSSBusinessPoller implements IWBundleStartable {
 	private static RSSBusinessPoller _instance = null; 
 	
 	private static final String BUNDLE_PROPERTY_NAME_POLL_INTERVAL = "iw_bundle_rss_poll_interval";
-	
-	private IWBundle bundle_;
 }
