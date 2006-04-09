@@ -239,15 +239,15 @@ public class RSSBusinessPoller implements IWBundleStartable {
 	 * @return An instance of RSSBusiness
 	 */
 	private RSSBusiness getBusiness() {
-		if(_business==null) {
+		if(this._business==null) {
 			try {
 				RSSBusinessHome businessHome = new RSSBusinessHomeImpl();
-				_business = businessHome.create();
+				this._business = businessHome.create();
 			} catch(Exception e) {
 				e.printStackTrace();
 			}
 		}
-		return _business;
+		return this._business;
 	}
 	
 	private RSSBusiness _business = null;
